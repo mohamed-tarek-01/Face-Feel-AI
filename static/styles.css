@@ -1,0 +1,54 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Buttons */
+.btn {
+    width: 150px;
+    font-size: 16px;
+}
+
+/* Cards */
+.card {
+    max-width: 100%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* Image and Video Styling */
+.img-thumbnail, #videoStream {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Fixed Logo Alignment */
+.logo-img {
+    display: block;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 20%;
+    object-fit: cover;
+}
+
+/* Fixed container size for processed images to prevent layout shifts */
+#processedImageContainer {
+    width: 100%; 
+    height: 250px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa; 
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+/* Adjust processed image dimensions */
+#processedImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    display: block;
+}
+
