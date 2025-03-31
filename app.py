@@ -10,7 +10,7 @@ import threading
 app = Flask(__name__)
 
 # Load facial emotion classification model
-model = tf.keras.models.load_model('model.h5')
+model = tf.keras.models.load_model('models/model.h5')
 label_encoders = {
     'angry': 0, 'disgust': 1, 'fear': 2, 
     'happy': 3, 'neutral': 4, 'sad': 5, 'surprise': 6
