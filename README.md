@@ -66,6 +66,7 @@ A lightweight web interface was built using Flask to deploy the trained model an
 
 ## 📁 Repository Structure
 
+```
 Face Feel AI/
 ├── app.py # Flask backend
 ├── README.md # Project documentation
@@ -80,7 +81,7 @@ Face Feel AI/
 │ ├── index.html # Home page
 │ ├── about_me.html # About the developer
 │ └── our_work.html # Project explanation
-
+```
 
 ## 🚀 Run the App
 
@@ -95,11 +96,7 @@ Then open your browser at http://localhost:5000
 ## 📌 Future Improvements
 
 Add support for real-time webcam-based emotion detection
-
 Improve accuracy with advanced architectures (e.g., ResNet, EfficientNet)
-
 Convert the model to ONNX or TensorFlow.js for cross-platform deployment
-
 Extend dataset with in-the-wild facial images for better generalization
-
 
