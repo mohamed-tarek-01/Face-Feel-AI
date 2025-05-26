@@ -4,13 +4,11 @@
 
 This project focuses on developing a facial emotion recognition (FER) system using the FER2013 dataset. The model classifies facial expressions into seven basic emotions, helping machines understand human affective states from facial images.
 
----
 
 ## 🎯 Project Objective
 
 To build a deep learning model that can accurately recognize human emotions from facial expressions using grayscale images. The model aims to support applications in mental health analysis, user experience enhancement, and human-computer interaction.
 
----
 
 ## 🧰 Model Overview
 
@@ -23,8 +21,6 @@ To build a deep learning model that can accurately recognize human emotions from
 - Batch Normalization and Dropout for regularization
 - Fully connected layers for final emotion classification
 - Trained with augmented data to enhance generalization
-
----
 
 ## 📦 Dataset
 
@@ -49,8 +45,6 @@ To build a deep learning model that can accurately recognize human emotions from
 - Brightness adjustments (light variations)  
 - Zoom & cropping (focus on face area)
 
----
-
 ## 📈 Model Training & Evaluation
 
 - **Framework**: TensorFlow / Keras
@@ -58,8 +52,6 @@ To build a deep learning model that can accurately recognize human emotions from
 - **Optimizer**: Adam
 - **Metrics**: Accuracy
 - **Final Accuracy**: ~68% on the FER2013 test set
-
----
 
 ## 🖥️ Flask Web Application
 
@@ -71,8 +63,6 @@ A lightweight web interface was built using Flask to deploy the trained model an
 - **⚙️ Real-time Prediction**: Model processes and classifies the image instantly.
 - **🎨 Simple UI**: HTML, CSS, and JS provide a user-friendly experience.
 - **📂 Local Hosting**: Easy to run and test on any machine.
-
----
 
 ## 📁 Repository Structure
 
@@ -92,8 +82,6 @@ Face Feel AI/
 │ └── our_work.html # Project explanation
 
 
----
-
 ## 🚀 Run the App
 
 To run the Flask app locally:
@@ -103,7 +91,6 @@ python app.py
 ```
 Then open your browser at http://localhost:5000
 
----
 
 ## 📌 Future Improvements
 
