@@ -96,7 +96,10 @@ Then open your browser at http://localhost:5000
 ## 📌 Future Improvements
 
 Add support for real-time webcam-based emotion detection
+
 Improve accuracy with advanced architectures (e.g., ResNet, EfficientNet)
+
 Convert the model to ONNX or TensorFlow.js for cross-platform deployment
+
 Extend dataset with in-the-wild facial images for better generalization
 
