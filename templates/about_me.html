@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta information for character encoding and responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Face Feel AI</title>    
+    
+    <!-- Linking external CSS stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-light">
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home') }}">Face Feel AI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('our_work') }}">Our Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('about_me') }}">About Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="container mt-5 pt-5">
+        <h1 class="text-center mb-4 text-primary">About Me</h1>
+        
+        <!-- Section: Who I Am -->
+        <div class="card shadow-lg p-4 mb-4">
+            <h2><i class="fas fa-user-graduate text-info"></i> Who I Am</h2>
+            <p>I'm an AI enthusiast from the <strong>Faculty of Computers and Artificial Intelligence</strong>, specializing in <strong>Artificial Intelligence</strong>. My mission is to build intelligent solutions that bridge the gap between AI and real-world applications.</p>
+        </div>
+
+        <!-- Section: What I Do -->
+        <div class="card shadow-lg p-4 mb-4">
+            <h2><i class="fas fa-cogs text-success"></i> What I Do</h2>
+            <p>I focus on <strong>Data Science and Machine Learning</strong>, developing AI models for various applications. Some of my key areas include:</p>
+            <ul>
+                <li>Deep Learning for Image Processing.</li>
+                <li>Machine Learning Model Development.</li>
+                <li>End-to-End AI Deployment.</li>
+            </ul>
+        </div>
+
+        <!-- Section: My Expertise -->
+        <div class="card shadow-lg p-4 mb-4">
+            <h2><i class="fas fa-project-diagram text-warning"></i> My Expertise</h2>
+            <p>I have hands-on experience with:</p>
+            <ul>
+                <li>Data Science & ML Engineering.</li>
+                <li>Python and AI frameworks like TensorFlow and PyTorch.</li>
+                <li>Building and deploying AI models with Flask.</li>
+            </ul>
+        </div>
+
+        <!-- Section: My Vision -->
+        <div class="card shadow-lg p-4">
+            <h2><i class="fas fa-rocket text-danger"></i> My Vision</h2>
+            <p>My aim is to create innovative AI solutions that enhance human interaction with technology, making AI more accessible and impactful in everyday life.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

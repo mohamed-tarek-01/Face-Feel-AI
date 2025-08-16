@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Feel AI</title>    
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <!-- Bootstrap CSS for responsive design and styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS for additional styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+    <!-- jQuery for handling client-side interactions -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="bg-light">
+
+    <!-- 🔹 Header (Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Face Feel AI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('our_work') }}">Our Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about_me') }}">About Me</a>
+                    </li>                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 🔹 Main Content -->
+    <div class="container mt-5 pt-5 text-center">  <!-- Adjusted padding for navbar -->        
+        <div class="row align-items-center">
+            <!-- Left Section: Upload an image and view the processed output -->
+            <div class="col-md-5" id="uploadSection">
+                <div class="card p-4 shadow-lg">
+                    <h2>Upload an Image</h2>
+                    <input type="file" class="form-control mt-3" id="imageUpload" accept="image/*" onchange="previewImage(event)">
+                    <button class="btn btn-primary mt-3" id="predictBtn">Predict</button>
+                    <p id="uploadResult" class="mt-3"></p>
+                </div>
+
+                <!-- Processed image will be displayed here -->
+                <div class="card p-4 mt-4 shadow-lg" id="processedImageContainer">
+                    <h3>Processed Image:</h3>
+                    <img id="processedImage" src="{{ url_for('static', filename='transparent.png') }}" class="img-thumbnail mt-3">
+                </div>
+            </div>
+
+            <!-- Logo in the Center -->
+            <div class="col-md-2 text-center">
+                <img src="{{ url_for('static', filename='Main-1.jpeg') }}" alt="Logo" class="logo-img">
+            </div>
+
+            <!-- Right Section: Live camera feed for real-time facial emotion detection -->
+            <div class="col-md-5" id="liveCamera">
+                <div class="card p-4 shadow-lg">
+                    <h2>Live Camera</h2>
+                    <center>
+                        <button id="startCamera" class="btn btn-success">Open Camera</button>                    
+                        <button id="stopCamera" class="btn btn-danger d-none">Close Camera</button>
+                    </center>
+                    <video id="videoStream" class="border mt-3 d-none" autoplay></video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

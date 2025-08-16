@@ -1,0 +1,86 @@
+<!-- Define the document type and language -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta information for character set and responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work - Face Feel AI</title>    
+    
+    <!-- Link to external stylesheet for custom styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+    <!-- Bootstrap CSS for responsive design -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-light">
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home') }}">Face Feel AI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('our_work') }}">Our Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('about_me') }}">About Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content container -->
+    <div class="container mt-5 pt-5">
+        <h1 class="text-center mb-4 text-primary">Our Work</h1>
+        
+        <!-- Project: Facial Emotion Recognition -->
+        <div class="card shadow-lg p-4 mb-4">
+            <h2><i class="fas fa-database text-info"></i> Facial Emotion Recognition with FER2013</h2>
+            <p>At <strong>Face Feel AI</strong>, we developed a facial emotion recognition system using the <strong>FER2013 dataset</strong>. This dataset contains thousands of labeled images representing different emotions, providing a strong foundation for training our deep learning model.</p>
+        </div>
+
+        <!-- Project: Data Preprocessing & Augmentation -->
+        <div class="card shadow-lg p-4 mb-4">
+            <h2><i class="fas fa-image text-success"></i> Data Preprocessing & Augmentation</h2>
+            <p>To enhance model performance, we applied <strong>data augmentation techniques</strong>, including:</p>
+            <ul>
+                <li>Rotation to account for slight head tilts.</li>
+                <li>Flipping to introduce variations in facial orientation.</li>
+                <li>Brightness adjustments to improve robustness under different lighting conditions.</li>
+                <li>Zooming & Cropping to create diverse training samples.</li>
+            </ul>
+        </div>
+
+        <!-- Project: Model Development -->
+        <div class="card shadow-lg p-4 mb-4">
+            <h2><i class="fas fa-brain text-warning"></i> Model Development - CNN</h2>
+            <p>We built a <strong>CNN model</strong> specifically designed for facial emotion recognition. The architecture included:</p>
+            <ul>
+                <li>Multiple convolutional layers to extract essential facial features.</li>
+                <li>Batch normalization & dropout layers to prevent overfitting.</li>
+                <li>Fully connected layers for final emotion classification.</li>
+            </ul>
+            <p>After rigorous training and fine-tuning, our model achieved an <strong>accuracy of 68%</strong>, which is competitive for the FER2013 dataset.</p>
+        </div>
+
+        <!-- Project: Deployment with Flask -->
+        <div class="card shadow-lg p-4">
+            <h2><i class="fas fa-server text-danger"></i> Deployment with Flask</h2>
+            <p>To make the model accessible, we deployed it using <strong>Flask</strong>, a lightweight web framework. The deployment involved:</p>
+            <ul>
+                <li>Developing a <strong>user-friendly web interface</strong> for image uploads and real-time predictions.</li>
+                <li>Integrating the trained CNN model to process user-submitted images.</li>
+                <li>Hosting the Flask application for seamless interaction with users.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript for interactivity -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
