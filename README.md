@@ -1,4 +1,4 @@
-# Face Feel AI - Facial Emotion Recognition using CNN
+# Face Feel AI - Facial Emotion Recognition using EfficientNet
 
 ## 🧠 Domain: Computer Vision & Deep Learning
 
